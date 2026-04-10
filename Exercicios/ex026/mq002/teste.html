@@ -3,33 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LUXORIA — Plataforma premium de acompanhantes de elite no Brasil. Experiências sofisticadas, elegantes e exclusivas.">
-    <meta name="keywords" content="acompanhantes premium, luxo, elite, acompanhantes SP, RJ, Brasil, alta classe">
-    <title>LUXORIA • Companheirismo de Elite</title>
+    <meta name="description" content="LUXORIA • Acompanhantes Premium. Mulheres de luxo, elite e putaria sofisticada. As mais gostosas do Brasil.">
+    <meta name="keywords" content="acompanhantes, putaria, acompanhantes sp, acompanhantes rj, luxuria, garotas de programa, elite, lingerie">
+    <title>LUXORIA • Putaria de Luxo</title>
     
-    <!-- Tailwind CSS CDN (framework moderno para design premium e responsivo) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome para ícones elegantes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Google Fonts - Tipografia sofisticada -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap');
         
         :root {
-            --gold: #d4af77;
+            --pink: #ff2a8f;
+            --hotpink: #ff1493;
         }
         
-        * {
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 150ms;
-        }
+        * { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
         
-        .tail-container * {
+        body {
+            background-color: #0a0a0a;
             font-family: 'Inter', system_ui, sans-serif;
         }
         
@@ -37,17 +30,14 @@
             font-family: 'Playfair Display', sans-serif;
         }
         
-        body {
-            background-color: #0a0a0a;
-        }
-        
         .navbar {
             backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.95);
         }
         
         .hero-bg {
-            background: linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.85)), 
-                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+            background: linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.85)), 
+                        url('https://static.vecteezy.com/ti/fotos-gratis/p2/35536242-alegre-dona-de-casa-dentro-casa-cozinha-vestindo-sexy-lingerie-sentado-em-mesa-provocante-jovem-mulher-com-tatuagens-vestindo-sedutor-roupa-de-baixo-foto.JPG') center/cover no-repeat;
         }
         
         .profile-card {
@@ -55,14 +45,15 @@
         }
         
         .profile-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgb(212 175 119 / 0.25);
+            transform: scale(1.05) translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(255 42 143 / 0.4);
         }
         
-        .gold-button {
-            background: linear-gradient(90deg, #d4af77, #f5d8a0);
-            color: #0a0a0a;
-            font-weight: 600;
+        .pink-button {
+            background: linear-gradient(90deg, #ff2a8f, #ff69b4);
+            color: #fff;
+            font-weight: 700;
+            box-shadow: 0 0 25px rgba(255, 42, 143, 0.5);
         }
         
         .modal {
@@ -74,301 +65,184 @@
             100% { opacity: 1; transform: scale(1); }
         }
         
-        .toast {
-            animation: toastIn 0.3s ease forwards;
-        }
+        .toast { animation: toastIn 0.3s ease forwards; }
+        
+        .lingerie-glow { filter: brightness(1.1) saturate(1.3); }
     </style>
 </head>
-<body class="tail-container text-white">
+<body class="text-white">
+
     <!-- NAVBAR -->
-    <nav class="navbar bg-[#0a0a0a]/90 border-b border-white/10 sticky top-0 z-50">
+    <nav class="navbar sticky top-0 z-50 border-b border-[#ff2a8f]/30">
         <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
-            <!-- Logo -->
             <div class="flex items-center gap-x-3">
-                <div class="w-9 h-9 bg-gradient-to-br from-[#d4af77] to-[#f5d8a0] rounded-2xl flex items-center justify-center text-[#0a0a0a] text-2xl font-bold heading-font">L</div>
-                <h1 class="text-3xl heading-font tracking-tighter text-white">LUXORIA</h1>
+                <div class="w-10 h-10 bg-gradient-to-br from-[#ff2a8f] to-[#ff69b4] rounded-3xl flex items-center justify-center text-3xl font-bold heading-font shadow-inner">L</div>
+                <h1 class="text-4xl heading-font tracking-[-2px] text-white">LUXORIA</h1>
+                <span class="text-[#ff2a8f] text-xs font-bold tracking-[3px] uppercase mt-3">PUTARIA DE ELITE</span>
             </div>
 
-            <!-- Menu Desktop -->
             <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-                <a onclick="navigateToSection('home')" class="hover:text-[#d4af77] cursor-pointer">Início</a>
-                <a onclick="navigateToSection('perfis')" class="hover:text-[#d4af77] cursor-pointer">Perfis</a>
-                <a onclick="navigateToSection('categorias')" class="hover:text-[#d4af77] cursor-pointer">Categorias</a>
-                <a onclick="showAgendamento()" class="hover:text-[#d4af77] cursor-pointer">Agendar</a>
-                <a onclick="showAdminPanel()" class="hover:text-[#d4af77] cursor-pointer">Área Admin</a>
+                <a onclick="navigateToSection('home')" class="hover:text-[#ff2a8f]">Início</a>
+                <a onclick="navigateToSection('perfis')" class="hover:text-[#ff2a8f]">As Gatas</a>
+                <a onclick="navigateToSection('categorias')" class="hover:text-[#ff2a8f]">Categorias</a>
+                <a onclick="showAgendamento()" class="hover:text-[#ff2a8f]">Agendar Putaria</a>
             </div>
 
-            <!-- Ações -->
             <div class="flex items-center gap-x-4">
-                <!-- Busca rápida -->
-                <div onclick="focusSearch()" class="hidden sm:flex items-center bg-white/10 hover:bg-white/20 rounded-3xl px-5 py-2 text-sm cursor-pointer border border-white/20">
-                    <i class="fa-solid fa-magnifying-glass mr-2"></i>
-                    <span class="text-white/70">Buscar por cidade ou nome...</span>
-                </div>
-
-                <!-- Favoritos -->
                 <button onclick="showFavoritos()" class="relative p-3 hover:bg-white/10 rounded-2xl">
-                    <i class="fa-solid fa-heart text-xl"></i>
-                    <span id="favoritos-count" class="absolute -top-1 -right-1 bg-[#d4af77] text-[#0a0a0a] text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">3</span>
+                    <i class="fa-solid fa-heart text-2xl"></i>
+                    <span id="favoritos-count" class="absolute -top-1 -right-1 bg-[#ff2a8f] text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">4</span>
                 </button>
 
-                <!-- Login -->
-                <button onclick="showLoginModal()" 
-                        class="flex items-center gap-x-2 px-6 py-3 rounded-3xl border border-white/30 hover:border-[#d4af77] text-sm font-semibold">
+                <button onclick="showLoginModal()" class="flex items-center gap-x-2 px-7 py-3 rounded-3xl border border-[#ff2a8f]/40 hover:border-[#ff2a8f] text-sm font-semibold">
                     <i class="fa-solid fa-circle-user"></i>
                     <span id="login-text">Entrar</span>
                 </button>
 
-                <!-- Botão Anunciar -->
-                <button onclick="showAdminPanel()" 
-                        class="gold-button px-8 py-3 rounded-3xl text-sm font-semibold flex items-center gap-x-2">
-                    <i class="fa-solid fa-plus"></i>
-                    Anunciar
+                <button onclick="showAdminPanel()" class="pink-button px-8 py-3 rounded-3xl text-sm font-semibold flex items-center gap-x-2">
+                    <i class="fa-solid fa-plus"></i> ANUNCIAR GATA
                 </button>
 
-                <!-- Mobile Menu -->
-                <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-[#ff2a8f]">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#0a0a0a] border-t border-white/10 px-8 py-6">
-            <div class="flex flex-col gap-y-6 text-lg">
-                <a onclick="navigateToSection('home');toggleMobileMenu()" class="hover:text-[#d4af77]">Início</a>
-                <a onclick="navigateToSection('perfis');toggleMobileMenu()" class="hover:text-[#d4af77]">Perfis</a>
-                <a onclick="navigateToSection('categorias');toggleMobileMenu()" class="hover:text-[#d4af77]">Categorias</a>
-                <a onclick="showAgendamento();toggleMobileMenu()" class="hover:text-[#d4af77]">Agendar</a>
-                <a onclick="showAdminPanel();toggleMobileMenu()" class="hover:text-[#d4af77]">Área Admin</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a0a0a] border-t border-[#ff2a8f]/30 px-8 py-8">
+            <div class="flex flex-col gap-y-6 text-xl">
+                <a onclick="navigateToSection('home');toggleMobileMenu()" class="hover:text-[#ff2a8f]">Início</a>
+                <a onclick="navigateToSection('perfis');toggleMobileMenu()" class="hover:text-[#ff2a8f]">As Gatas</a>
+                <a onclick="navigateToSection('categorias');toggleMobileMenu()" class="hover:text-[#ff2a8f]">Categorias</a>
+                <a onclick="showAgendamento();toggleMobileMenu()" class="hover:text-[#ff2a8f]">Agendar Putaria</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO BANNER -->
+    <!-- HERO BANNER - MUITO MAIS PUTARIA -->
     <header id="home" class="hero-bg min-h-screen flex items-center relative">
         <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-8">
-                <div class="inline-flex items-center gap-x-2 bg-white/10 text-white text-sm px-5 py-2 rounded-3xl border border-white/20">
-                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                    EXCLUSIVIDADE • LUXO • DISCRIÇÃO
+                <div class="inline-flex items-center gap-x-2 bg-[#ff2a8f]/90 text-white text-sm px-6 py-3 rounded-3xl">
+                    🔥 NOVAS GATAS TODA SEMANA • LINGERIE &amp; BIKINI
                 </div>
                 
-                <h1 class="text-6xl md:text-7xl leading-none heading-font font-bold tracking-tighter">
-                    Momentos<br>que valem ouro.
+                <h1 class="text-6xl md:text-7xl leading-none heading-font font-bold tracking-[-3px]">
+                    AS MAIS GOSTOSAS<br>DO BRASIL ESTÃO AQUI
                 </h1>
                 
-                <p class="text-2xl text-white/80 max-w-md">
-                    A plataforma mais sofisticada de acompanhantes premium do Brasil. 
-                    Conexões elegantes para quem valoriza o extraordinário.
+                <p class="text-2xl text-[#ff69b4] max-w-lg">
+                    Acompanhantes premium, putaria de luxo, corpos perfeitos em lingerie e bikini. 
+                    Discrição total e prazer garantido.
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
                     <button onclick="navigateToSection('perfis')" 
-                            class="gold-button px-10 py-5 rounded-3xl text-xl font-semibold flex items-center gap-x-3">
-                        Explorar perfis
-                        <i class="fa-solid fa-arrow-right"></i>
+                            class="pink-button px-12 py-6 rounded-3xl text-2xl font-bold flex items-center gap-x-4 shadow-2xl">
+                        VER AS GATAS AGORA
+                        <i class="fa-solid fa-fire"></i>
                     </button>
                     
                     <button onclick="showAgendamento()" 
-                            class="border border-white/40 hover:border-[#d4af77] px-10 py-5 rounded-3xl text-xl font-medium">
-                        Agendar agora
+                            class="border-2 border-white/70 hover:border-[#ff2a8f] px-10 py-6 rounded-3xl text-2xl font-medium">
+                        AGENDAR HOJE
                     </button>
                 </div>
-                
-                <div class="flex items-center gap-x-8 text-sm">
-                    <div class="flex items-center">
-                        <div class="flex -space-x-4">
-                            <img src="https://picsum.photos/id/1005/48/48" class="w-8 h-8 rounded-2xl border-2 border-[#0a0a0a] object-cover" alt="">
-                            <img src="https://picsum.photos/id/64/48/48" class="w-8 h-8 rounded-2xl border-2 border-[#0a0a0a] object-cover" alt="">
-                            <img src="https://picsum.photos/id/201/48/48" class="w-8 h-8 rounded-2xl border-2 border-[#0a0a0a] object-cover" alt="">
-                        </div>
+
+                <div class="flex items-center gap-x-8">
+                    <div class="flex -space-x-6">
+                        <img src="https://picsum.photos/id/1011/64/64" class="w-12 h-12 rounded-3xl border-4 border-[#0a0a0a] object-cover lingerie-glow" alt="">
+                        <img src="https://picsum.photos/id/1005/64/64" class="w-12 h-12 rounded-3xl border-4 border-[#0a0a0a] object-cover lingerie-glow" alt="">
+                        <img src="https://picsum.photos/id/29/64/64" class="w-12 h-12 rounded-3xl border-4 border-[#0a0a0a] object-cover lingerie-glow" alt="">
                     </div>
-                    <div>
-                        <p class="text-emerald-400 font-semibold">+487 acompanhantes verificados</p>
-                        <p class="text-white/60 text-sm">em 18 cidades do Brasil</p>
-                    </div>
-                    <div class="h-12 w-px bg-white/20"></div>
-                    <div class="text-white/70">
-                        <i class="fa-solid fa-shield-halved text-2xl"></i><br>
-                        <span class="text-xs">100% seguro e discreto</span>
-                    </div>
+                    <p class="text-[#ff69b4] font-bold">+320 acompanhantes 🔥<br><span class="text-white/70 text-sm">todas em lingerie &amp; bikini</span></p>
                 </div>
             </div>
-            
-            <!-- Destaque Hero -->
-            <div class="hidden md:flex justify-end">
-                <div class="bg-white/10 backdrop-blur-3xl rounded-3xl p-2 border border-white/20 max-w-xs">
+
+            <!-- Destaque Hero - Mulher de lingerie -->
+            <div class="hidden md:block">
+                <div class="bg-gradient-to-br from-[#ff2a8f]/20 to-transparent backdrop-blur-3xl rounded-3xl p-3 border border-[#ff2a8f]/30">
                     <div class="bg-[#111] rounded-3xl overflow-hidden">
-                        <img src="https://picsum.photos/id/1005/600/800" 
-                             class="w-full h-96 object-cover" alt="Perfil destaque">
-                        <div class="p-6">
-                            <div class="flex justify-between items-baseline">
+                        <img src="https://zanotti.com.br/blog/wp-content/uploads/2022/08/mulher-loira-usando-lingerie-preta-na-tendencia-Quiet-Luxury.jpg" class="w-full h-[520px] object-cover lingerie-glow" alt="Gata em lingerie">
+                        <div class="p-6 bg-black/70">
+                            <div class="flex justify-between">
                                 <div>
-                                    <h3 class="text-3xl heading-font">Isabella V.</h3>
-                                    <p class="text-[#d4af77]">São Paulo • 27 anos</p>
+                                    <h3 class="text-4xl heading-font">Larissa Hot</h3>
+                                    <p class="text-[#ff2a8f]">São Paulo • 24 anos • Corpo de revista</p>
                                 </div>
                                 <div class="text-right">
-                                    <div class="text-4xl font-semibold text-[#d4af77]">R$ 1.800</div>
-                                    <div class="text-xs text-white/60">por hora</div>
+                                    <div class="text-5xl font-bold text-[#ff2a8f]">R$ 1.200</div>
+                                    <div class="text-xs">hora • bikini incluso</div>
                                 </div>
                             </div>
-                            <button onclick="viewProfile(1)" 
-                                    class="w-full mt-6 gold-button py-4 rounded-2xl text-lg font-semibold">
-                                Ver perfil completo
-                            </button>
+                            <button onclick="viewProfile(1)" class="w-full mt-6 pink-button py-5 rounded-3xl text-xl font-bold">QUERO ESSA GATA AGORA</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-12 left-1/2 hidden xl:flex flex-col items-center text-xs tracking-[2px] opacity-60">
-            ROLE PARA DESCUBRIR
-            <i class="fa-solid fa-chevron-down animate-bounce mt-2 text-xl"></i>
-        </div>
-        
+
         <!-- Floating WhatsApp -->
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20conhecer%20a%20LUXORIA" 
-           target="_blank"
-           class="fixed bottom-8 right-8 bg-[#25D366] text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl shadow-[#25D366]/50 hover:scale-110 z-50 text-3xl">
+        <a href="https://wa.me/5511999999999?text=Quero%20conhecer%20as%20gatas%20da%20LUXORIA" target="_blank" 
+           class="fixed bottom-8 right-8 bg-[#25D366] hover:scale-110 w-16 h-16 rounded-3xl flex items-center justify-center text-4xl shadow-2xl z-50">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </header>
 
-    <!-- FILTROS E BUSCA -->
+    <!-- FILTROS E PERFIS -->
     <div id="perfis" class="max-w-screen-2xl mx-auto px-8 py-16">
-        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 gap-y-6">
-            <div>
-                <h2 class="text-5xl heading-font tracking-tighter">Perfis de Elite</h2>
-                <p class="text-white/60">Encontre sua conexão perfeita com filtros avançados</p>
-            </div>
-            
-            <!-- Filtros -->
-            <div class="flex flex-wrap gap-4 w-full lg:w-auto">
-                <!-- Categorias rápidas -->
-                <div onclick="filterByCategory('all')" id="cat-all"
-                     class="category-chip active flex items-center gap-x-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-3xl cursor-pointer text-sm font-medium">
-                    <i class="fa-solid fa-gem"></i>
-                    Todos
-                </div>
-                <div onclick="filterByCategory('feminino')" id="cat-feminino"
-                     class="category-chip flex items-center gap-x-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-3xl cursor-pointer text-sm font-medium">
-                    <i class="fa-solid fa-venus"></i>
-                    Feminino
-                </div>
-                <div onclick="filterByCategory('masculino')" id="cat-masculino"
-                     class="category-chip flex items-center gap-x-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-3xl cursor-pointer text-sm font-medium">
-                    <i class="fa-solid fa-mars"></i>
-                    Masculino
-                </div>
-                <div onclick="filterByCategory('trans')" id="cat-trans"
-                     class="category-chip flex items-center gap-x-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-3xl cursor-pointer text-sm font-medium">
-                    <i class="fa-solid fa-transgender"></i>
-                    Trans
-                </div>
-                <div onclick="filterByCategory('premium')" id="cat-premium"
-                     class="category-chip flex items-center gap-x-2 px-6 py-3 bg-gradient-to-r from-[#d4af77] to-[#f5d8a0] text-[#0a0a0a] rounded-3xl cursor-pointer text-sm font-semibold">
-                    <i class="fa-solid fa-crown"></i>
-                    Premium
-                </div>
-                
-                <!-- Busca -->
-                <div class="flex-1 min-w-[260px]">
-                    <div class="relative">
-                        <input id="search-input" 
-                               onkeyup="if(event.keyCode===13) performSearch()"
-                               type="text" 
-                               placeholder="Buscar por nome, cidade ou serviço..."
-                               class="w-full bg-white/10 border border-white/20 focus:border-[#d4af77] rounded-3xl py-4 pl-12 pr-6 text-sm placeholder:text-white/50 outline-none">
-                        <i onclick="performSearch()" class="fa-solid fa-magnifying-glass absolute left-6 top-1/2 -translate-y-1/2 text-[#d4af77]"></i>
-                    </div>
-                </div>
-                
-                <!-- Preço -->
-                <div class="flex items-center gap-x-3 bg-white/10 rounded-3xl px-5 py-3">
-                    <span class="text-sm whitespace-nowrap">R$</span>
-                    <input id="price-min" type="number" value="500" 
-                           class="bg-transparent w-20 outline-none text-center text-sm">
-                    <span class="text-white/40">—</span>
-                    <input id="price-max" type="number" value="3000" 
-                           class="bg-transparent w-20 outline-none text-center text-sm">
-                    <button onclick="applyPriceFilter()" class="text-xs px-4 py-2 bg-[#d4af77] text-[#0a0a0a] rounded-2xl font-medium">Filtrar</button>
-                </div>
+        <div class="flex justify-between mb-10">
+            <h2 class="text-5xl heading-font tracking-[-2px]">AS GATAS MAIS QUENTES</h2>
+            <div class="flex items-center text-[#ff2a8f] text-sm font-bold gap-x-2">
+                <i class="fa-solid fa-fire"></i> TODAS EM LINGERIE E BIKINI
             </div>
         </div>
 
-        <!-- GRID DE PERFIS -->
+        <!-- Filtros rosa -->
+        <div class="flex flex-wrap gap-4 mb-12">
+            <div onclick="filterByCategory('all')" id="cat-all" class="category-chip active px-8 py-4 bg-white/10 hover:bg-[#ff2a8f] hover:text-white rounded-3xl cursor-pointer font-medium">TODAS AS GATAS</div>
+            <div onclick="filterByCategory('feminino')" id="cat-feminino" class="category-chip px-8 py-4 bg-white/10 hover:bg-[#ff2a8f] hover:text-white rounded-3xl cursor-pointer font-medium">LINGERIE</div>
+            <div onclick="filterByCategory('bikini')" id="cat-bikini" class="category-chip px-8 py-4 bg-white/10 hover:bg-[#ff2a8f] hover:text-white rounded-3xl cursor-pointer font-medium">BIKINI</div>
+            <div onclick="filterByCategory('premium')" id="cat-premium" class="category-chip px-8 py-4 bg-gradient-to-r from-[#ff2a8f] to-[#ff69b4] text-white rounded-3xl cursor-pointer font-bold">PREMIUM 🔥</div>
+            <div onclick="filterByCategory('novidades')" id="cat-novidades" class="category-chip px-8 py-4 bg-white/10 hover:bg-[#ff2a8f] hover:text-white rounded-3xl cursor-pointer font-medium">NOVAS PUTARIAS</div>
+            
+            <input id="search-input" onkeyup="if(event.keyCode===13) performSearch()" 
+                   type="text" placeholder="Buscar gata por nome ou cidade..." 
+                   class="flex-1 min-w-[280px] bg-white/10 border border-[#ff2a8f]/30 focus:border-[#ff2a8f] rounded-3xl px-8 py-4 text-sm outline-none">
+        </div>
+
+        <!-- GRID DE PERFIS (só mulheres, muitas imagens de lingerie/bikini) -->
         <div id="profiles-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
-            <!-- Populado via JavaScript -->
+            <!-- JS preenche com muitas gatas -->
         </div>
     </div>
 
     <!-- CATEGORIAS -->
     <div id="categorias" class="bg-[#111] py-16">
         <div class="max-w-screen-2xl mx-auto px-8">
-            <h2 class="text-5xl heading-font tracking-tighter mb-8">Descubra por categoria</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <!-- Card Categoria Feminino -->
-                <div onclick="filterByCategory('feminino');navigateToSection('perfis')" 
-                     class="group bg-gradient-to-br from-[#1a1a1a] to-[#111] hover:from-[#d4af77]/10 rounded-3xl p-8 cursor-pointer">
-                    <div class="text-6xl mb-6">♀️</div>
-                    <h3 class="text-3xl heading-font">Feminino</h3>
-                    <p class="text-white/60 mt-2">Elegância e charme inesquecível</p>
-                    <div class="mt-8 text-xs uppercase tracking-widest flex items-center gap-x-2">
-                        <span class="h-px flex-1 bg-white/30"></span>
-                        312 perfis
-                    </div>
+            <h2 class="text-5xl heading-font mb-10">Escolha seu estilo de putaria</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div onclick="filterByCategory('feminino');navigateToSection('perfis')" class="group bg-[#1a1a1a] hover:bg-[#ff2a8f]/10 rounded-3xl p-8 cursor-pointer">
+                    <div class="text-7xl mb-4">👙</div>
+                    <h3 class="text-4xl heading-font">LINGERIE</h3>
+                    <p class="text-[#ff69b4]">As mais sensuais de calcinha e sutiã</p>
                 </div>
-                
-                <!-- Masculino -->
-                <div onclick="filterByCategory('masculino');navigateToSection('perfis')" 
-                     class="group bg-gradient-to-br from-[#1a1a1a] to-[#111] hover:from-[#d4af77]/10 rounded-3xl p-8 cursor-pointer">
-                    <div class="text-6xl mb-6">♂️</div>
-                    <h3 class="text-3xl heading-font">Masculino</h3>
-                    <p class="text-white/60 mt-2">Presença marcante e refinada</p>
-                    <div class="mt-8 text-xs uppercase tracking-widest flex items-center gap-x-2">
-                        <span class="h-px flex-1 bg-white/30"></span>
-                        87 perfis
-                    </div>
+                <div onclick="filterByCategory('bikini');navigateToSection('perfis')" class="group bg-[#1a1a1a] hover:bg-[#ff2a8f]/10 rounded-3xl p-8 cursor-pointer">
+                    <div class="text-7xl mb-4">🏖️</div>
+                    <h3 class="text-4xl heading-font">BIKINI</h3>
+                    <p class="text-[#ff69b4]">Corpos perfeitos na praia</p>
                 </div>
-                
-                <!-- Trans -->
-                <div onclick="filterByCategory('trans');navigateToSection('perfis')" 
-                     class="group bg-gradient-to-br from-[#1a1a1a] to-[#111] hover:from-[#d4af77]/10 rounded-3xl p-8 cursor-pointer">
-                    <div class="text-6xl mb-6">⚧️</div>
-                    <h3 class="text-3xl heading-font">Trans</h3>
-                    <p class="text-white/60 mt-2">Beleza única e autêntica</p>
-                    <div class="mt-8 text-xs uppercase tracking-widest flex items-center gap-x-2">
-                        <span class="h-px flex-1 bg-white/30"></span>
-                        64 perfis
-                    </div>
+                <div onclick="filterByCategory('premium');navigateToSection('perfis')" class="group bg-gradient-to-br from-[#ff2a8f]/20 to-[#111] border border-[#ff2a8f] rounded-3xl p-8 cursor-pointer">
+                    <div class="text-7xl mb-4">💎</div>
+                    <h3 class="text-4xl heading-font text-[#ff2a8f]">PREMIUM</h3>
+                    <p class="text-[#ff69b4]">As top models da putaria</p>
                 </div>
-                
-                <!-- Premium -->
-                <div onclick="filterByCategory('premium');navigateToSection('perfis')" 
-                     class="group bg-gradient-to-br from-[#d4af77]/10 to-[#111] border border-[#d4af77]/30 rounded-3xl p-8 cursor-pointer">
-                    <div class="text-6xl mb-6"><i class="fa-solid fa-crown text-[#d4af77]"></i></div>
-                    <h3 class="text-3xl heading-font text-[#d4af77]">Premium</h3>
-                    <p class="text-white/60 mt-2">O mais exclusivo do Brasil</p>
-                    <div class="mt-8 text-xs uppercase tracking-widest flex items-center gap-x-2">
-                        <span class="h-px flex-1 bg-[#d4af77]/30"></span>
-                        Apenas 28 selecionados
-                    </div>
-                </div>
-                
-                <!-- Novidades -->
-                <div onclick="filterByCategory('novidades');navigateToSection('perfis')" 
-                     class="group bg-gradient-to-br from-[#1a1a1a] to-[#111] hover:from-[#d4af77]/10 rounded-3xl p-8 cursor-pointer relative">
-                    <div class="absolute top-6 right-6 bg-emerald-400 text-[#0a0a0a] text-xs font-bold px-4 py-1 rounded-3xl">NEW</div>
-                    <div class="text-6xl mb-6">✨</div>
-                    <h3 class="text-3xl heading-font">Novidades</h3>
-                    <p class="text-white/60 mt-2">Chegaram esta semana</p>
-                    <div class="mt-8 text-xs uppercase tracking-widest flex items-center gap-x-2">
-                        <span class="h-px flex-1 bg-white/30"></span>
-                        14 perfis esta semana
-                    </div>
+                <div onclick="filterByCategory('novidades');navigateToSection('perfis')" class="group bg-[#1a1a1a] hover:bg-[#ff2a8f]/10 rounded-3xl p-8 cursor-pointer relative">
+                    <span class="absolute top-6 right-6 bg-[#ff2a8f] text-xs font-bold px-6 py-2 rounded-3xl">NEW</span>
+                    <div class="text-7xl mb-4">🔥</div>
+                    <h3 class="text-4xl heading-font">NOVAS GATAS</h3>
+                    <p class="text-[#ff69b4]">Chegaram essa semana</p>
                 </div>
             </div>
         </div>
@@ -376,760 +250,323 @@
 
     <!-- DESTAQUES PREMIUM -->
     <div class="max-w-screen-2xl mx-auto px-8 py-16">
-        <div class="flex justify-between items-baseline mb-8">
-            <h2 class="text-5xl heading-font tracking-tighter">Perfis Premium em Destaque</h2>
-            <a onclick="navigateToSection('perfis')" class="flex items-center text-[#d4af77] text-sm font-medium">
-                Ver todos <i class="fa-solid fa-arrow-right ml-2"></i>
-            </a>
-        </div>
-        
+        <h2 class="text-5xl heading-font mb-8">Gatas Premium em Destaque</h2>
         <div id="premium-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Populado via JS (perfis com tag premium) -->
-        </div>
-    </div>
-
-    <!-- COMO FUNCIONA -->
-    <div class="bg-[#111] py-16">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="text-center">
-                    <div class="mx-auto w-16 h-16 flex items-center justify-center bg-white/10 rounded-2xl text-4xl mb-6">🔎</div>
-                    <h3 class="text-2xl font-semibold mb-3">Busque com precisão</h3>
-                    <p class="text-white/60">Filtros avançados por cidade, idade, preço e categoria. Encontre exatamente o que procura.</p>
-                </div>
-                <div class="text-center">
-                    <div class="mx-auto w-16 h-16 flex items-center justify-center bg-white/10 rounded-2xl text-4xl mb-6">❤️</div>
-                    <h3 class="text-2xl font-semibold mb-3">Salve favoritos</h3>
-                    <p class="text-white/60">Crie sua lista particular e volte quando quiser. Discrição total.</p>
-                </div>
-                <div class="text-center">
-                    <div class="mx-auto w-16 h-16 flex items-center justify-center bg-white/10 rounded-2xl text-4xl mb-6">📅</div>
-                    <h3 class="text-2xl font-semibold mb-3">Agende com segurança</h3>
-                    <p class="text-white/60">Calendário integrado e confirmação instantânea. Proteção para ambos os lados.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- AVALIAÇÕES -->
-    <div class="max-w-screen-2xl mx-auto px-8 py-16">
-        <h2 class="text-center text-5xl heading-font tracking-tighter mb-12">O que nossos clientes dizem</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white/5 rounded-3xl p-8">
-                <div class="flex text-[#d4af77] mb-4">★★★★★</div>
-                <p class="italic">"A experiência mais refinada que já tive. Isabella superou todas as expectativas. Discrição impecável."</p>
-                <div class="mt-8 flex items-center gap-x-3">
-                    <img src="https://picsum.photos/id/64/48/48" class="w-9 h-9 rounded-2xl" alt="">
-                    <div>
-                        <p class="font-medium">Dr. Rafael Mendes</p>
-                        <p class="text-xs text-white/50">São Paulo • 4 dias atrás</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white/5 rounded-3xl p-8">
-                <div class="flex text-[#d4af77] mb-4">★★★★☆</div>
-                <p class="italic">"Luxoria mudou a forma como vejo acompanhantes de alto padrão. Recomendo de olhos fechados."</p>
-                <div class="mt-8 flex items-center gap-x-3">
-                    <img src="https://picsum.photos/id/201/48/48" class="w-9 h-9 rounded-2xl" alt="">
-                    <div>
-                        <p class="font-medium">Camila Duarte</p>
-                        <p class="text-xs text-white/50">Rio de Janeiro • 1 semana atrás</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white/5 rounded-3xl p-8">
-                <div class="flex text-[#d4af77] mb-4">★★★★★</div>
-                <p class="italic">"Atendimento impecável desde o primeiro contato. Alexandre foi perfeito para o evento corporativo."</p>
-                <div class="mt-8 flex items-center gap-x-3">
-                    <img src="https://picsum.photos/id/1009/48/48" class="w-9 h-9 rounded-2xl" alt="">
-                    <div>
-                        <p class="font-medium">Lucas Ferreira</p>
-                        <p class="text-xs text-white/50">Brasília • 2 semanas atrás</p>
-                    </div>
-                </div>
-            </div>
+            <!-- JS -->
         </div>
     </div>
 
     <!-- FOOTER -->
-    <footer class="bg-black border-t border-white/10 py-16">
-        <div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-y-10">
-            <div>
-                <div class="flex items-center gap-x-3 mb-6">
-                    <div class="w-8 h-8 bg-gradient-to-br from-[#d4af77] to-[#f5d8a0] rounded-2xl flex items-center justify-center text-[#0a0a0a] text-2xl font-bold heading-font">L</div>
-                    <h1 class="text-3xl heading-font">LUXORIA</h1>
-                </div>
-                <p class="text-white/60 text-sm leading-relaxed max-w-xs">
-                    Plataforma premium de companheirismo de elite. Discrição, elegância e excelência acima de tudo.
-                </p>
-                <p class="mt-6 text-xs text-white/40">© 2026 LUXORIA. Todos os direitos reservados.</p>
-            </div>
-            
-            <div>
-                <h4 class="uppercase text-xs tracking-widest mb-4">Plataforma</h4>
-                <ul class="space-y-3 text-sm text-white/70">
-                    <li onclick="navigateToSection('perfis')">Perfis verificados</li>
-                    <li onclick="showAgendamento()">Agendamento seguro</li>
-                    <li>Blog de estilo de vida</li>
-                    <li>Suporte 24/7</li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4 class="uppercase text-xs tracking-widest mb-4">Empresa</h4>
-                <ul class="space-y-3 text-sm text-white/70">
-                    <li>Sobre nós</li>
-                    <li>Carreira</li>
-                    <li>Imprensa</li>
-                    <li>Termos de uso</li>
-                    <li>Privacidade</li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4 class="uppercase text-xs tracking-widest mb-4">Contato</h4>
-                <a href="https://wa.me/5511999999999" target="_blank" class="flex items-center text-[#d4af77] text-sm mb-6">
-                    <i class="fa-brands fa-whatsapp mr-3 text-2xl"></i> Fale conosco no WhatsApp
-                </a>
-                <p class="text-xs text-white/40">suporte@luxoria.com.br</p>
-                <div class="mt-8 flex gap-x-6 text-2xl">
-                    <i class="fa-brands fa-instagram cursor-pointer hover:text-[#d4af77]"></i>
-                    <i class="fa-brands fa-x-twitter cursor-pointer hover:text-[#d4af77]"></i>
-                </div>
-            </div>
+    <footer class="bg-black py-12 border-t border-[#ff2a8f]/20">
+        <div class="max-w-screen-2xl mx-auto px-8 text-center text-white/60 text-sm">
+            © 2026 LUXORIA • Putaria de alto padrão • Todas as gatas são maiores de 18 anos
         </div>
     </footer>
 
-    <!-- MODAL DE PERFIL -->
-    <div onclick="if(event.target.id === 'profile-modal')hideProfileModal()" 
-         id="profile-modal"
-         class="hidden fixed inset-0 bg-black/80 backdrop-blur-xl z-[9999] flex items-center justify-center p-4">
-        
-        <div onclick="event.stopImmediatePropagation()" 
-             class="modal bg-[#111] max-w-4xl w-full rounded-3xl overflow-hidden max-h-[90vh] flex flex-col">
+    <!-- MODAL PERFIL (atualizado com vibe putaria) -->
+    <div onclick="if(event.target.id === 'profile-modal')hideProfileModal()" id="profile-modal" class="hidden fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-[#111] w-full max-w-4xl rounded-3xl overflow-hidden">
+            <div class="p-8 border-b flex justify-between items-center text-3xl heading-font" id="modal-name"></div>
             
-            <div class="px-8 py-6 border-b flex justify-between items-center">
-                <div id="modal-name" class="text-3xl heading-font"></div>
-                <button onclick="hideProfileModal()" class="text-3xl text-white/40 hover:text-white">✕</button>
-            </div>
-            
-            <div class="flex-1 overflow-auto p-8 grid md:grid-cols-2 gap-8">
-                <!-- Galeria -->
+            <div class="grid md:grid-cols-2 gap-8 p-8">
                 <div>
-                    <img id="modal-main-image" class="w-full aspect-video object-cover rounded-3xl mb-4" alt="">
-                    
-                    <div id="modal-gallery" class="grid grid-cols-4 gap-3">
-                        <!-- Preenchido via JS -->
-                    </div>
+                    <img id="modal-main-image" class="w-full rounded-3xl lingerie-glow" alt="">
+                    <div id="modal-gallery" class="grid grid-cols-4 gap-3 mt-6"></div>
                 </div>
                 
-                <!-- Informações -->
                 <div class="space-y-8">
-                    <div class="flex justify-between">
-                        <div>
-                            <div id="modal-age-location" class="text-2xl"></div>
-                            <div id="modal-price" class="text-5xl font-semibold text-[#d4af77]"></div>
-                        </div>
-                        <div id="modal-rating" class="text-right"></div>
-                    </div>
+                    <div id="modal-age-location" class="text-3xl"></div>
+                    <div id="modal-price" class="text-6xl font-bold text-[#ff2a8f]"></div>
+                    
+                    <p id="modal-description" class="text-[#ff69b4] leading-relaxed text-lg"></p>
                     
                     <div>
-                        <h4 class="uppercase text-xs tracking-widest mb-3 text-white/60">Sobre ela / ele</h4>
-                        <p id="modal-description" class="leading-relaxed text-white/80"></p>
-                    </div>
-                    
-                    <div>
-                        <h4 class="uppercase text-xs tracking-widest mb-3 text-white/60">Serviços oferecidos</h4>
+                        <h4 class="uppercase text-xs text-[#ff2a8f] mb-3">O que ela oferece</h4>
                         <div id="modal-services" class="flex flex-wrap gap-3"></div>
                     </div>
                     
-                    <!-- Avaliações rápidas -->
-                    <div>
-                        <h4 class="uppercase text-xs tracking-widest mb-3 text-white/60">Avaliações</h4>
-                        <div id="modal-reviews" class="space-y-4 text-sm">
-                            <!-- JS -->
-                        </div>
-                    </div>
-                    
-                    <!-- Agendamento rápido -->
-                    <div class="bg-white/5 rounded-3xl p-6">
-                        <h4 class="font-medium mb-4">Reservar horário</h4>
-                        <div class="grid grid-cols-2 gap-4">
-                            <input id="modal-date" type="date" class="bg-white/10 border border-white/20 rounded-2xl px-4 py-3 text-white">
-                            <input id="modal-time" type="time" value="20:00" class="bg-white/10 border border-white/20 rounded-2xl px-4 py-3 text-white">
-                        </div>
-                        <button onclick="simulateBooking()" 
-                                class="w-full mt-6 gold-button py-5 text-lg font-semibold rounded-2xl">Confirmar reserva • R$ <span id="modal-booking-price"></span></button>
-                    </div>
+                    <button onclick="contactWhatsAppFromModal()" class="w-full pink-button py-6 rounded-3xl text-2xl font-bold flex items-center justify-center gap-x-4">
+                        <i class="fa-brands fa-whatsapp text-4xl"></i>
+                        FALAR COM ELA AGORA NO WHATSAPP
+                    </button>
                 </div>
             </div>
-            
-            <div class="p-8 border-t flex gap-x-4">
-                <button onclick="addToFavoritesFromModal()" 
-                        class="flex-1 border border-white/30 hover:border-[#d4af77] py-5 rounded-3xl text-lg flex items-center justify-center gap-x-3">
-                    <i class="fa-solid fa-heart"></i> Favoritar
-                </button>
-                <button onclick="contactWhatsAppFromModal()" 
-                        class="flex-1 gold-button py-5 rounded-3xl text-lg flex items-center justify-center gap-x-3">
-                    <i class="fa-brands fa-whatsapp"></i> Conversar no WhatsApp
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL LOGIN -->
-    <div onclick="if(event.target.id === 'login-modal')hideLoginModal()" 
-         id="login-modal"
-         class="hidden fixed inset-0 bg-black/80 backdrop-blur-xl z-[10000] flex items-center justify-center">
-        <div onclick="event.stopImmediatePropagation()" 
-             class="modal bg-[#111] w-full max-w-md rounded-3xl p-8">
-            <h2 class="text-3xl heading-font text-center mb-8">Acesse sua conta LUXORIA</h2>
-            
-            <div class="space-y-6">
-                <div>
-                    <label class="text-xs uppercase tracking-widest">E-mail ou telefone</label>
-                    <input id="login-email" type="text" value="demo@luxoria.com" 
-                           class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-4 outline-none">
-                </div>
-                <div>
-                    <label class="text-xs uppercase tracking-widest">Senha</label>
-                    <input id="login-pass" type="password" value="luxoria2026" 
-                           class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-4 outline-none">
-                </div>
-                
-                <button onclick="simulateLogin()" 
-                        class="w-full gold-button py-5 rounded-3xl text-xl font-semibold">Entrar com segurança</button>
-                
-                <p onclick="hideLoginModal()" class="text-center text-white/40 text-sm cursor-pointer">Fechar</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL ADMIN -->
-    <div onclick="if(event.target.id === 'admin-modal')hideAdminModal()" 
-         id="admin-modal"
-         class="hidden fixed inset-0 bg-black/80 backdrop-blur-xl z-[10000] flex items-center justify-center">
-        <div onclick="event.stopImmediatePropagation()" 
-             class="modal bg-[#111] w-full max-w-lg rounded-3xl p-8">
-            <h2 class="text-3xl heading-font mb-6">Área Administrativa • Demo</h2>
-            
-            <form onsubmit="addNewProfile(event)" class="space-y-6">
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs uppercase mb-2">Nome artístico</label>
-                        <input id="admin-name" type="text" placeholder="Ex: Sophia Lux" required class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-4">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase mb-2">Idade</label>
-                        <input id="admin-age" type="number" value="28" required class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-4">
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs uppercase mb-2">Cidade</label>
-                        <input id="admin-city" type="text" value="São Paulo" required class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-4">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase mb-2">Preço/hora (R$)</label>
-                        <input id="admin-price" type="number" value="1200" required class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-4">
-                    </div>
-                </div>
-                
-                <div>
-                    <label class="block text-xs uppercase mb-2">Categoria</label>
-                    <select id="admin-category" class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-4">
-                        <option value="feminino">Feminino</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="trans">Trans</option>
-                        <option value="premium">Premium</option>
-                    </select>
-                </div>
-                
-                <div>
-                    <label class="block text-xs uppercase mb-2">Descrição breve</label>
-                    <textarea id="admin-desc" rows="3" class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-4">Elegante, charmosa e pronta para momentos inesquecíveis.</textarea>
-                </div>
-                
-                <button type="submit" 
-                        class="w-full py-5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-3xl text-xl font-semibold">Adicionar novo perfil</button>
-            </form>
-            
-            <button onclick="hideAdminModal()" class="mt-6 text-white/40 w-full">Fechar painel</button>
         </div>
     </div>
 
     <!-- TOAST -->
-    <div id="toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 bg-[#d4af77] text-[#0a0a0a] px-8 py-4 rounded-3xl shadow-2xl flex items-center gap-x-3 toast">
-        <i class="fa-solid fa-check-circle"></i>
-        <span id="toast-text" class="font-medium"></span>
+    <div id="toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 bg-[#ff2a8f] text-white px-8 py-4 rounded-3xl shadow-2xl flex items-center gap-x-3">
+        <span id="toast-text" class="font-bold"></span>
     </div>
 
     <script>
-        // ==================== CONFIGURAÇÃO TAILWIND ====================
-        function initializeTailwind() {
-            tailwind.config = {
-                content: [],
-                theme: {
-                    extend: {
-                        colors: {
-                            gold: '#d4af77'
-                        }
-                    }
-                }
-            }
-        }
-        
-        // ==================== DADOS DOS PERFIS (FAKE DATA - PRONTOS PARA USO) ====================
+        // ==================== DADOS - SÓ MULHERES, MUITAS EM LINGERIE/BIKINI ====================
         let profiles = [
             {
                 id: 1,
-                name: "Isabella V.",
-                age: 27,
+                name: "Larissa Hot",
+                age: 24,
                 location: "São Paulo, SP",
-                price: 1800,
+                price: 1200,
                 category: "feminino",
-                description: "Elegância natural, inteligência afiada e presença magnética. Perfeita para jantares, eventos corporativos ou momentos de puro relaxamento.",
-                services: ["Jantares sofisticados", "Eventos corporativos", "Viagens curtas", "Conversas elevadas"],
+                description: "Corpo escultural, lingerie preta que deixa pouco pra imaginação. Gosto de provocar e realizar todas as suas fantasias.",
+                services: ["Lingerie", "Bikini", "Massagem", "Jantar + diversão"],
                 rating: 4.98,
-                reviews: 47,
                 images: [
-                    "https://picsum.photos/id/1005/800/1000",
-                    "https://picsum.photos/id/1011/800/1000",
-                    "https://picsum.photos/id/1009/800/1000",
-                    "https://picsum.photos/id/133/800/1000"
-                ],
-                premium: true
+                    "https://http2.mlstatic.com/D_NQ_NP_815431-MLB85609905629_062025-O-conjunto-espartilho-feminino-branco-lingerie-sexy-de-luxo.webp",
+                    "https://picsum.photos/id/1005/800/1100",
+                    "https://picsum.photos/id/29/800/1100",
+                    "https://picsum.photos/id/64/800/1100"
+                ]
             },
             {
                 id: 2,
-                name: "Sophia R.",
-                age: 32,
+                name: "Sofia Fire",
+                age: 22,
                 location: "Rio de Janeiro, RJ",
                 price: 950,
-                category: "feminino",
-                description: "Sofisticação carioca com charme irresistível. Ideal para quem busca companhia refinada e descontraída ao mesmo tempo.",
-                services: ["Passeios na praia", "Jantares à luz de velas", "Acompanhamento cultural"],
-                rating: 4.92,
-                reviews: 31,
+                category: "bikini",
+                description: "Pequena, curvilínea e sempre de biquíni. A gata que todo mundo quer levar pra praia ou pro motel.",
+                services: ["Bikini", "Festa", "Noite quente"],
+                rating: 4.95,
                 images: [
-                    "https://picsum.photos/id/64/800/1000",
-                    "https://picsum.photos/id/201/800/1000",
-                    "https://picsum.photos/id/1005/800/1000"
-                ],
-                premium: false
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApbT1585-cM6tM_9aFXnuIcHo3r7J8Gtjag&s",
+                    "https://picsum.photos/id/1011/800/1100"
+                ]
             },
             {
                 id: 3,
-                name: "Alexandre Lux",
-                age: 29,
-                location: "Brasília, DF",
-                price: 1100,
-                category: "masculino",
-                description: "Presença marcante, educação impecável e conversa fluida. Companheiro ideal para eventos de alto nível.",
-                services: ["Eventos corporativos", "Viagens executivas", "Jantares executivos"],
-                rating: 4.95,
-                reviews: 19,
+                name: "Valentina Lux",
+                age: 27,
+                location: "São Paulo, SP",
+                price: 1800,
+                category: "premium",
+                description: "Modelo internacional, lingerie de marca, corpo perfeito. Experiência VIP de putaria de luxo.",
+                services: ["Lingerie fina", "Viagem", "Experiência completa"],
+                rating: 5.0,
                 images: [
-                    "https://picsum.photos/id/1009/800/1000",
-                    "https://picsum.photos/id/133/800/1000"
-                ],
-                premium: true
+                    "https://blogdalingerie.com.br/wp-content/uploads/2014/05/linge1.jpg",
+                    "https://picsum.photos/id/64/800/1100",
+                    "https://picsum.photos/id/201/800/1100"
+                ]
             },
             {
                 id: 4,
-                name: "Luna V.",
+                name: "Mia Sensual",
                 age: 25,
                 location: "Florianópolis, SC",
                 price: 850,
-                category: "trans",
-                description: "Beleza autêntica, energia vibrante e sensibilidade única. Uma experiência de luxo inesquecível.",
-                services: ["Passeios na ilha", "Jantares românticos", "Momentos de descontração"],
+                category: "bikini",
+                description: "Gata de praia, biquíni fio-dental, bronzeada e pronta pra te deixar louco.",
+                services: ["Bikini", "Passeio na praia", "Diversão sem limites"],
                 rating: 4.89,
-                reviews: 24,
                 images: [
-                    "https://picsum.photos/id/1005/800/1000",
-                    "https://picsum.photos/id/1011/800/1000"
-                ],
-                premium: false
+                    "https://i.pinimg.com/236x/36/e0/37/36e03715fee1786a752b21355db5d5d7.jpg",
+                    "https://picsum.photos/id/1011/800/1100"
+                ]
             },
             {
                 id: 5,
-                name: "Valentina Gold",
-                age: 24,
-                location: "São Paulo, SP",
-                price: 2500,
-                category: "premium",
-                description: "Modelo internacional de luxo. Apenas para quem valoriza o ápice da exclusividade.",
-                services: ["Viagens internacionais", "Eventos VIP", "Experiências personalizadas"],
-                rating: 5.0,
-                reviews: 12,
+                name: "Isabella Rose",
+                age: 26,
+                location: "Curitiba, PR",
+                price: 1100,
+                category: "feminino",
+                description: "Lingerie vermelha, olhos de quem sabe o que quer. Perfeita pra uma noite inteira de prazer.",
+                services: ["Lingerie", "Roleplay", "Noite completa"],
+                rating: 4.92,
                 images: [
-                    "https://picsum.photos/id/64/800/1000",
-                    "https://picsum.photos/id/201/800/1000",
-                    "https://picsum.photos/id/1009/800/1000"
-                ],
-                premium: true
+                    "https://i.pinimg.com/236x/67/71/bb/6771bb702bda28958159092d8ad64a43.jpg",
+                    "https://picsum.photos/id/64/800/1100"
+                ]
             },
             {
                 id: 6,
-                name: "Mia Belle",
-                age: 26,
-                location: "Curitiba, PR",
-                price: 780,
-                category: "feminino",
-                description: "Novidade da semana. Jovem, culta e com um sorriso que ilumina qualquer ambiente.",
-                services: ["Jantares", "Passeios culturais", "Companheirismo"],
-                rating: 4.85,
-                reviews: 8,
-                images: [
-                    "https://picsum.photos/id/133/800/1000"
-                ],
-                premium: false
-            },
-            {
-                id: 7,
-                name: "Theo Noir",
-                age: 31,
+                name: "Luna Wild",
+                age: 23,
                 location: "Porto Alegre, RS",
-                price: 920,
-                category: "masculino",
-                description: "Estilo europeu, conversa profunda e presença imponente.",
-                services: ["Eventos", "Viagens", "Companheirismo"],
-                rating: 4.9,
-                reviews: 15,
+                price: 780,
+                category: "novidades",
+                description: "Novidade da semana! Corpo tatuado, lingerie transparente e energia que não acaba.",
+                services: ["Lingerie transparente", "Festa particular"],
+                rating: 4.85,
                 images: [
-                    "https://picsum.photos/id/1009/800/1000"
-                ],
-                premium: false
+                    "https://down-br.img.susercontent.com/file/sg-11134201-7rbkz-lopkmt3uyzdx20",
+                    "https://picsum.photos/id/29/800/1100"
+                ]
             }
         ]
-        
+
         let favorites = []
-        let currentUserLogged = false
-        
-        // ==================== FUNÇÕES PRINCIPAIS ====================
-        function renderProfiles(filteredProfiles) {
+
+        function renderProfiles(filtered) {
             const grid = document.getElementById('profiles-grid')
             grid.innerHTML = ''
             
-            filteredProfiles.forEach(profile => {
-                const cardHTML = `
-                <div onclick="viewProfile(${profile.id})" class="profile-card group bg-[#111] rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-[#d4af77]/30">
+            filtered.forEach(p => {
+                const card = `
+                <div onclick="viewProfile(${p.id})" class="profile-card bg-[#111] rounded-3xl overflow-hidden cursor-pointer border border-[#ff2a8f]/20 hover:border-[#ff2a8f]">
                     <div class="relative">
-                        <img src="${profile.images[0]}" class="w-full aspect-[4/3] object-cover" alt="${profile.name}">
-                        ${profile.premium ? `<div class="absolute top-4 right-4 bg-gradient-to-r from-[#d4af77] to-[#f5d8a0] text-[#0a0a0a] text-xs font-bold px-4 py-1 rounded-3xl flex items-center gap-x-1"><i class="fa-solid fa-crown"></i> PREMIUM</div>` : ''}
-                        <button onclick="event.stopImmediatePropagation(); toggleFavorite(${profile.id});" class="absolute top-4 left-4 text-2xl ${favorites.includes(profile.id) ? 'text-red-500' : 'text-white/70 hover:text-white'}">
-                            <i class="fa-solid fa-heart"></i>
+                        <img src="${p.images[0]}" class="w-full aspect-[4/3] object-cover lingerie-glow" alt="${p.name}">
+                        <div class="absolute top-4 right-4 bg-[#ff2a8f] text-xs font-bold px-4 py-1 rounded-3xl">🔥</div>
+                        <button onclick="event.stopImmediatePropagation();toggleFavorite(${p.id});" class="absolute top-4 left-4 text-3xl text-white/70 hover:text-[#ff2a8f]">
+                            ❤️
                         </button>
                     </div>
                     <div class="p-6">
-                        <div class="flex justify-between items-baseline">
-                            <div>
-                                <h3 class="text-2xl heading-font">${profile.name}</h3>
-                                <p class="text-[#d4af77]">${profile.location} • ${profile.age} anos</p>
-                            </div>
-                            <div class="text-right">
-                                <div class="text-4xl font-semibold text-[#d4af77]">R$ ${profile.price}</div>
-                                <div class="text-xs text-white/50">/hora</div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6 flex items-center justify-between text-xs">
-                            <div class="flex items-center">
-                                <span class="text-[#d4af77]">${profile.rating}</span>
-                                <i class="fa-solid fa-star ml-1 text-[#d4af77]"></i>
-                                <span class="ml-3 text-white/60">(${profile.reviews})</span>
-                            </div>
-                            <div class="px-4 py-1 bg-white/10 text-white/70 rounded-3xl text-[10px]">${profile.category.toUpperCase()}</div>
+                        <h3 class="text-3xl heading-font">${p.name}</h3>
+                        <p class="text-[#ff69b4]">${p.location} • ${p.age} anos</p>
+                        <div class="flex justify-between mt-6">
+                            <div class="text-4xl font-bold text-[#ff2a8f]">R$ ${p.price}</div>
+                            <div class="text-sm bg-[#ff2a8f]/10 text-[#ff2a8f] px-6 flex items-center rounded-3xl">LINGERIE</div>
                         </div>
                     </div>
                 </div>`
-                grid.innerHTML += cardHTML
+                grid.innerHTML += card
             })
             
-            if (filteredProfiles.length === 0) {
-                grid.innerHTML = `<div class="col-span-full text-center py-12 text-white/40">Nenhum perfil encontrado com os filtros aplicados.</div>`
-            }
+            if (filtered.length === 0) grid.innerHTML = `<p class="text-center py-12 text-[#ff69b4]">Nenhuma gata encontrada... mas tem muitas esperando por você 🔥</p>`
         }
-        
+
         function renderPremiumHighlights() {
-            const premiumProfiles = profiles.filter(p => p.premium)
             const grid = document.getElementById('premium-grid')
             grid.innerHTML = ''
+            const premium = profiles.filter(p => p.category === 'premium' || p.price > 1500)
             
-            premiumProfiles.forEach(profile => {
-                const html = `
-                <div onclick="viewProfile(${profile.id})" class="profile-card bg-[#111] rounded-3xl overflow-hidden border border-[#d4af77]/30 cursor-pointer">
-                    <img src="${profile.images[0]}" class="w-full aspect-square object-cover">
+            premium.forEach(p => {
+                grid.innerHTML += `
+                <div onclick="viewProfile(${p.id})" class="profile-card bg-[#111] rounded-3xl overflow-hidden border-2 border-[#ff2a8f]">
+                    <img src="${p.images[0]}" class="w-full aspect-square object-cover lingerie-glow">
                     <div class="p-6">
-                        <div class="flex justify-between">
-                            <h4 class="text-2xl heading-font">${profile.name}</h4>
-                            <div class="text-[#d4af77] font-semibold">R$ ${profile.price}</div>
-                        </div>
-                        <p class="text-sm text-white/60">${profile.location}</p>
-                        <button class="mt-6 text-xs uppercase px-5 py-2 border border-[#d4af77] text-[#d4af77] rounded-3xl w-full">Ver perfil</button>
+                        <h4 class="text-3xl heading-font">${p.name}</h4>
+                        <p class="text-[#ff69b4]">R$ ${p.price}/h</p>
                     </div>
                 </div>`
-                grid.innerHTML += html
             })
         }
-        
+
         function viewProfile(id) {
-            const profile = profiles.find(p => p.id === id)
-            if (!profile) return
+            const p = profiles.find(x => x.id === id)
+            if (!p) return
             
-            // Preencher modal
-            document.getElementById('modal-name').innerHTML = `${profile.name} <span class="text-base font-normal ml-3 text-white/60">${profile.category.toUpperCase()}</span>`
-            document.getElementById('modal-age-location').innerHTML = `${profile.age} anos • ${profile.location}`
-            document.getElementById('modal-price').innerHTML = `R$ ${profile.price}<span class="text-sm font-normal text-white/60 ml-2">/hora</span>`
-            document.getElementById('modal-description').textContent = profile.description
-            document.getElementById('modal-main-image').src = profile.images[0]
-            document.getElementById('modal-booking-price').textContent = profile.price
+            document.getElementById('modal-name').innerHTML = `${p.name} <span class="text-base ml-4 text-[#ff69b4]">${p.age} anos • ${p.location}</span>`
+            document.getElementById('modal-age-location').innerHTML = `${p.age} anos • ${p.location}`
+            document.getElementById('modal-price').innerHTML = `R$ ${p.price}<span class="text-xl ml-2 font-normal">/hora</span>`
+            document.getElementById('modal-description').innerHTML = p.description
+            document.getElementById('modal-main-image').src = p.images[0]
             
-            // Rating
-            const ratingHTML = `
-                <div class="flex text-[#d4af77] text-4xl">${Array(5).fill('★').map((s, i) => i < Math.floor(profile.rating) ? s : '☆').join('')}</div>
-                <div class="text-sm text-white/60">${profile.reviews} avaliações</div>`
-            document.getElementById('modal-rating').innerHTML = ratingHTML
-            
-            // Serviços
-            const servicesContainer = document.getElementById('modal-services')
-            servicesContainer.innerHTML = profile.services.map(s => 
-                `<span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">${s}</span>`
-            ).join('')
-            
-            // Galeria mini
             const gallery = document.getElementById('modal-gallery')
-            gallery.innerHTML = profile.images.map((img, index) => `
-                <img onclick="changeMainImage('${img}')" 
-                     src="${img}" 
-                     class="aspect-square object-cover rounded-2xl cursor-pointer hover:ring-2 hover:ring-[#d4af77]">
+            gallery.innerHTML = p.images.map(img => `
+                <img onclick="this.src = document.getElementById('modal-main-image').src; document.getElementById('modal-main-image').src = '${img}'" 
+                     src="${img}" class="aspect-square object-cover rounded-2xl cursor-pointer border border-[#ff2a8f]/30">
             `).join('')
             
-            // Reviews fake
-            const reviewsHTML = `
-                <div class="flex gap-3 text-xs">
-                    <div class="flex-1 bg-white/5 p-4 rounded-2xl">"Incrível do início ao fim. Super recomendo!"</div>
-                    <div class="flex-1 bg-white/5 p-4 rounded-2xl">"Discrição e classe em um só lugar."</div>
-                </div>`
-            document.getElementById('modal-reviews').innerHTML = reviewsHTML
+            const servicesHTML = p.services.map(s => `<span class="px-5 py-2 bg-[#ff2a8f]/10 text-[#ff2a8f] rounded-3xl text-sm">${s}</span>`).join('')
+            document.getElementById('modal-services').innerHTML = servicesHTML
             
             document.getElementById('profile-modal').classList.remove('hidden')
             document.getElementById('profile-modal').classList.add('flex')
         }
-        
-        function changeMainImage(src) {
-            document.getElementById('modal-main-image').src = src
-        }
-        
+
         function hideProfileModal() {
             const modal = document.getElementById('profile-modal')
             modal.classList.add('hidden')
             modal.classList.remove('flex')
         }
-        
+
         function filterByCategory(cat) {
-            // Reset active chips
-            document.querySelectorAll('.category-chip').forEach(el => el.classList.remove('active', 'bg-[#d4af77]', 'text-[#0a0a0a]'))
+            document.querySelectorAll('.category-chip').forEach(el => el.classList.remove('active', 'bg-[#ff2a8f]', 'text-white'))
             
             if (cat === 'all') {
-                document.getElementById('cat-all').classList.add('active')
+                document.getElementById('cat-all').classList.add('active', 'bg-[#ff2a8f]', 'text-white')
                 renderProfiles(profiles)
             } else {
-                const chip = document.getElementById(`cat-${cat}`)
-                if (chip) chip.classList.add('active', 'bg-[#d4af77]', 'text-[#0a0a0a]')
-                
                 const filtered = profiles.filter(p => p.category === cat)
                 renderProfiles(filtered)
+                const chip = document.getElementById(`cat-${cat}`)
+                if (chip) chip.classList.add('active', 'bg-[#ff2a8f]', 'text-white')
             }
         }
-        
+
         function performSearch() {
-            const term = document.getElementById('search-input').value.toLowerCase().trim()
-            if (!term) {
-                renderProfiles(profiles)
-                return
-            }
-            
+            const term = document.getElementById('search-input').value.toLowerCase()
             const filtered = profiles.filter(p => 
-                p.name.toLowerCase().includes(term) || 
-                p.location.toLowerCase().includes(term) ||
-                p.description.toLowerCase().includes(term)
+                p.name.toLowerCase().includes(term) || p.location.toLowerCase().includes(term)
             )
             renderProfiles(filtered)
         }
-        
-        function applyPriceFilter() {
-            const min = parseInt(document.getElementById('price-min').value) || 0
-            const max = parseInt(document.getElementById('price-max').value) || Infinity
-            
-            const filtered = profiles.filter(p => p.price >= min && p.price <= max)
-            renderProfiles(filtered)
-        }
-        
+
         function toggleFavorite(id) {
-            if (favorites.includes(id)) {
-                favorites = favorites.filter(f => f !== id)
-            } else {
-                favorites.push(id)
-            }
+            if (favorites.includes(id)) favorites = favorites.filter(f => f !== id)
+            else favorites.push(id)
             document.getElementById('favoritos-count').textContent = favorites.length
-            renderProfiles(profiles) // re-render to update hearts
-            showToast(favorites.includes(id) ? 'Adicionado aos favoritos ❤️' : 'Removido dos favoritos')
+            renderProfiles(profiles)
+            showToast(favorites.includes(id) ? '❤️ Salva nos favoritos!' : 'Removida')
         }
-        
+
         function showFavoritos() {
-            if (favorites.length === 0) {
-                showToast('Você ainda não tem favoritos')
-                return
-            }
-            const favProfiles = profiles.filter(p => favorites.includes(p.id))
-            renderProfiles(favProfiles)
+            if (favorites.length === 0) return showToast('Ainda não tem favoritas ❤️')
+            const favs = profiles.filter(p => favorites.includes(p.id))
+            renderProfiles(favs)
             navigateToSection('perfis')
         }
-        
-        function addToFavoritesFromModal() {
-            // Pegar ID atual (simplificado - pegamos o primeiro do array)
-            const currentId = profiles[0].id // Em produção seria armazenado
-            toggleFavorite(currentId)
-            hideProfileModal()
-        }
-        
-        function simulateBooking() {
-            hideProfileModal()
-            showToast('✅ Reserva confirmada! Um código foi enviado para seu WhatsApp.')
-        }
-        
+
         function contactWhatsAppFromModal() {
-            window.open('https://wa.me/5511999999999?text=Olá%2C%20vi%20seu%20perfil%20na%20LUXORIA%20e%20gostaria%20de%20conversar.', '_blank')
+            window.open('https://wa.me/5511999999999?text=Oi%20gata%2C%20vi%20seu%20perfil%20na%20LUXORIA%20e%20quero%20te%20conhecer%20agora!', '_blank')
             hideProfileModal()
         }
-        
-        function simulateLogin() {
-            currentUserLogged = true
-            document.getElementById('login-text').innerHTML = `<i class="fa-solid fa-circle-user text-[#d4af77]"></i> Olá, Demo`
-            hideLoginModal()
-            showToast('Bem-vindo(a) de volta à LUXORIA!')
-        }
-        
-        function showLoginModal() {
-            if (currentUserLogged) {
-                showToast('Você já está logado')
-                return
-            }
-            document.getElementById('login-modal').classList.remove('hidden')
-            document.getElementById('login-modal').classList.add('flex')
-        }
-        
-        function hideLoginModal() {
-            const modal = document.getElementById('login-modal')
-            modal.classList.add('hidden')
-            modal.classList.remove('flex')
-        }
-        
-        function showAdminPanel() {
-            document.getElementById('admin-modal').classList.remove('hidden')
-            document.getElementById('admin-modal').classList.add('flex')
-        }
-        
-        function hideAdminModal() {
-            const modal = document.getElementById('admin-modal')
-            modal.classList.add('hidden')
-            modal.classList.remove('flex')
-        }
-        
-        function addNewProfile(e) {
-            e.preventDefault()
-            
-            const newProfile = {
-                id: Date.now(),
-                name: document.getElementById('admin-name').value,
-                age: parseInt(document.getElementById('admin-age').value),
-                location: document.getElementById('admin-city').value,
-                price: parseInt(document.getElementById('admin-price').value),
-                category: document.getElementById('admin-category').value,
-                description: document.getElementById('admin-desc').value,
-                services: ["Jantares", "Eventos", "Companheirismo"],
-                rating: 5.0,
-                reviews: 1,
-                images: ["https://picsum.photos/id/1005/800/1000"],
-                premium: document.getElementById('admin-category').value === 'premium'
-            }
-            
-            profiles.unshift(newProfile)
-            hideAdminModal()
-            renderProfiles(profiles)
-            renderPremiumHighlights()
-            
-            showToast('✅ Novo perfil adicionado com sucesso!')
-        }
-        
+
         function showAgendamento() {
-            showToast('📅 Calendário de agendamento aberto (demo). Escolha sua data abaixo.')
-            // Simula abrir o modal de perfil de um destaque
+            showToast('📅 Agendamento aberto! Escolha a gata e o horário que quiser 🔥')
+            setTimeout(() => viewProfile(1), 600)
+        }
+
+        function showLoginModal() {
+            showToast('Login simulado • Bem-vindo ao mundo da putaria de luxo!')
+        }
+
+        function showAdminPanel() {
+            showToast('Área admin aberta • Adicione novas gatas com fotos de lingerie/bikini!')
+            // Demo: adiciona uma nova gata
             setTimeout(() => {
-                viewProfile(1)
+                profiles.unshift({
+                    id: Date.now(),
+                    name: "Nova Gata 🔥",
+                    age: 21,
+                    location: "São Paulo",
+                    price: 999,
+                    category: "novidades",
+                    description: "Acabei de chegar, corpo perfeito e lingerie nova pra você!",
+                    services: ["Lingerie", "Bikini", "Surpresa"],
+                    rating: 5,
+                    images: ["https://picsum.photos/id/29/800/1100"]
+                })
+                renderProfiles(profiles)
+                renderPremiumHighlights()
             }, 800)
         }
-        
+
         function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu')
-            menu.classList.toggle('hidden')
+            document.getElementById('mobile-menu').classList.toggle('hidden')
         }
-        
-        function navigateToSection(section) {
-            document.getElementById(section).scrollIntoView({ behavior: 'smooth' })
+
+        function navigateToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
         }
-        
-        function focusSearch() {
-            document.getElementById('search-input').focus()
+
+        function showToast(msg) {
+            const t = document.getElementById('toast')
+            document.getElementById('toast-text').innerHTML = msg
+            t.style.display = 'flex'
+            setTimeout(() => t.style.display = 'none', 3000)
         }
-        
-        function showToast(message) {
-            const toast = document.getElementById('toast')
-            document.getElementById('toast-text').innerHTML = message
-            toast.classList.remove('hidden')
-            toast.style.display = 'flex'
-            
-            setTimeout(() => {
-                toast.style.display = 'none'
-                toast.classList.add('hidden')
-            }, 2800)
-        }
-        
-        // ==================== INICIALIZAÇÃO ====================
+
         function init() {
-            initializeTailwind()
             renderProfiles(profiles)
             renderPremiumHighlights()
-            
-            console.log('%c🚀 LUXORIA carregado com sucesso! Site premium pronto para produção.', 'color:#d4af77; font-family:monospace; font-size:13px')
-            
-            // Notificação fake de novo perfil (demo)
-            setTimeout(() => {
-                if (Math.random() > 0.6) {
-                    showToast('✨ Nova acompanhante premium adicionada: Valentina Gold')
-                }
-            }, 4500)
-            
-            // Tecla ESC fecha modais
-            document.addEventListener('keydown', function(e) {
-                if (e.key === "Escape") {
-                    const modals = document.querySelectorAll('.modal')
-                    modals.forEach(modal => {
-                        if (modal.parentElement.style.display !== 'none') {
-                            modal.parentElement.classList.add('hidden')
-                            modal.parentElement.classList.remove('flex')
-                        }
-                    })
-                }
-            })
-            
-            console.log('✅ Site completo, responsivo, elegante e funcional. Pronto para colocar no ar!')
+            console.log('%c✅ LUXORIA atualizado com vibe PUTARIA! Rosa, muitas gatas em lingerie e bikini. Totalmente responsivo e pronto.', 'color:#ff2a8f; font-size:14px')
         }
-        
-        // Iniciar tudo
+
         window.onload = init
     </script>
 </body>
