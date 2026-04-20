@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@media (max-width: 620px) {
+    header > h1 {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header > nav {
+        flex-flow: row wrap;
+    }
+
+    header > nav > a {
+        width: 80%;
+        text-align: center;
+    }
+}
