@@ -4,10 +4,8 @@ Curso de HTML e CSS do Curso em Vídeo
 
 Estou aprendendo a mexer com repositórios e GitHub
 
-<p>Alô barretos, abre o arquivo aí <a href="Desafios/d010/index.html">se foda falou</a>!</p>
+<p>Quer saber um pouco da história sobre o Android? Confira aqui 👉<a href="Desafios/d010/index.html">android</a>!</p>
 
-<p>Ainda existem cuiudos... <a href="Desafios/d012/index.html">vem ne mim cuiudete</a>!</p>
+<p>Gostaria uma dose de literatura? Que tal um <a href="Desafios/d012/index.html">Poema</a>?</p>
 
-<p>A Unipar <a href="Exercicios/ex025/form003.html">destruiu</a> a minha vida!</p>
-
-<p>Teste de site <a href="Exercicios/ex026/mq002/teste.html">carambolas</a></p>
+<p>Site de <a href="Exercicios/ex025/form003.html">Formulários</a>!</p>
